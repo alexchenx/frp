@@ -1,0 +1,15 @@
+# 监听端口
+bindPort = 7000
+
+# 身份验证
+auth.token = "NZ8WoHRB7l5IaVuk0IJ7"
+
+# 设置http及https协议下代理端口
+vhostHTTPPort = 7080
+vhostHTTPSPort = 7443
+
+# Dashboard 端口以及用户名密码
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = "admin"
+webServer.password = "YCV1LmAGODwvoyL8wkdU"

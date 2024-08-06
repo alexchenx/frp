@@ -1,0 +1,22 @@
+services:
+  frps:
+    build:
+      dockerfile: frp.Dockerfile
+    container_name: frps
+    image: frp:0.59.0
+    restart: always
+    network_mode: host
+    volumes:
+      - ./frps.toml:/usr/local/frp_0.59.0_linux_amd64/frps.toml
+    command: /usr/local/frp_0.59.0_linux_amd64/frps -c /usr/local/frp_0.59.0_linux_amd64/frps.toml
+
+  frpc:
+    build:
+      dockerfile: frp.Dockerfile
+    container_name: frpc
+    image: frp:0.59.0
+    restart: always
+    network_mode: host
+    volumes:
+      - ./frpc.toml:/usr/local/frp_0.59.0_linux_amd64/frpc.toml
+    command: /usr/local/frp_0.59.0_linux_amd64/frpc -c /usr/local/frp_0.59.0_linux_amd64/frpc.toml
